@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <title>Game of Life</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="control-section">
+                    <svg id="playButton" class="play-button" height="30" width="30" title="play">
+                        <path 
+                            d="M 8 3 L 8 27 L 25 15 L 8 3" 
+                            style="fill: #dfd4ea; stroke: #dfd4ea; stroke-width: 1"
+                        />
+                    </svg>
+                    <div id="genTime" class="perfomance"></div>
+                </div>
+                <div class="title">Game of Life</div>
+                <div class="exit-section">
+                    <div id="exitButton" class="button">Exit</div>
+                </div>
+            </header>
+            <div id="startWindow" class="start-window">
+                <div class="container">
+                    <div class="question">
+                        Choose play area size
+                    </div>
+                    <div class="section">
+                        <div class="unit unit__size">
+                            <label class="size-label" for="size-column">Columns:</label>
+                            <input type="number" id="size-column" class="size-box" rate="1" value="10"/>
+                        </div>
+                        <div class="unit unit__size">
+                            <label class="size-label" for="size-row">Rows:</label>
+                            <input type="number" id="size-row" class="size-box" rate="1" value="10"/>
+                        </div>
+                    </div>
+                    <div class="question">
+                        Choose first generation option
+                    </div>
+                    <div class="section">
+                        <div class="unit unit__opt">
+                            <input type="radio" id="opt1" name="startOpt" value="1">
+                            <label for="opt1">Random</label>
+                        </div>
+                        <div class="unit unit__opt">
+                            <input type="radio" id="opt2" name="startOpt" value="2" checked>
+                            <label for="opt2">Manual</label>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div id="startButton" class="button cont-button">Start</div>
+                    </div>
+                </div>
+            </div>
+            <div id="mainArea" class="main-area">
+                <canvas id="canvas">
+                    Please, update your browser to use canvas tag.
+                </canvas>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
