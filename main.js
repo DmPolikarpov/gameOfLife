@@ -104,6 +104,8 @@ function closeMainArea() {
     allObjects = [];
     colNumber, rowNumber, animId = undefined;
 
+    genTime.innerText = ``;
+
     startWindow.style.display = 'block';
     mainArea.style.display = 'none';
 }
